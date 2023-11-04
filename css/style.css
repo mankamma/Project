@@ -12,13 +12,19 @@ body {
 h2#menu {
     font-size: 30px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
+    text-align: left;
+    padding: 20px;
 }
 
 section#menu{
     font-size: 30px;
     clear: right;
     padding: 20px;
+}
+
+section img {
+    border-radius: 18%;
+    filter: drop-shadow(-14px 15px 8px lightsalmon)
 }
 
 /* main navigation style */
