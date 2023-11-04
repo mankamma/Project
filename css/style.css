@@ -1,4 +1,3 @@
-/* https://unsplash.com/photos/ICKXIX3RHQo */
 html {
     background-color: lightgrey;
 }
@@ -51,3 +50,90 @@ nav li a:visited {
 
 }
 
+.announcement {
+    display: inline-block;
+    height: 110%;
+    text-align: center;
+    width: 100%;
+    background: grey;
+    color: beige;
+    font-family: Arial, sans;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    font-size: 0.8em;
+    font-size: 15px;
+  }
+  
+  .announcement a { 
+    color: #ccc; 
+  }
+  
+  .announcement a:hover {
+    color: red;
+  }
+
+  header{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: linear-gradient(45deg, rgb(211,211,211),rgb(185, 210, 198), rgb(175, 200, 159), rgb(164, 219, 164), rgb(108, 167, 168));
+    
+  }
+
+  #pri{
+    width: 10px;
+    height:100px;
+    background-color: gold;
+    margin: 5px;
+    position:relative;
+    transform:translate(10px, 15px);
+    transition: (width 2s, height 5s, transform 3s);
+}
+
+#pri:hover{
+    width: 650px;
+    height: 5px;
+    transform: rotate(180deg);
+    background-color: rgb(175, 200, 159);
+    
+}
+
+div#sec{
+    width: 8px;
+    height:8px;
+    background-color: rgb(108, 167, 168);
+    animation-name: myLine;
+    animation-duration: 3s;
+    animation-delay: 1.5s;
+    animation-iteration-count: 3;
+    animation-direction: reverse;
+    margin: 15px;
+    position: relative;
+}
+
+@keyframes myLine {
+    0% {
+         background-color:  rgb(211,211,211);
+         left: 0px;
+         top: 0px;
+     }
+     25% {
+         background-color: rgb(201, 211, 206);
+        left: 100px;
+        top: 0px;
+     }
+     50% {
+        background-color: rgb(175, 200, 159);
+        left: 200px;
+        top: 0px;
+     }
+     75% {
+         background-color: rgb(164, 219, 164);
+         left: 100px;
+         top: 0px;
+     }
+     100% {
+         background-color: rgb(108, 167, 168);
+         left: 50px;
+         top: 0px;
+     }
+ }
