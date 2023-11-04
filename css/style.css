@@ -1,25 +1,45 @@
 /* https://unsplash.com/photos/ICKXIX3RHQo */
 html {
-    background-color: grey
+    background-color: lightgrey;
 }
 
+/* body style */
 body {
     font-size: 20px;
     color: black;
+    height: 900px;
 
 }
 
+/* main navigation style */
 nav li {
-    display: inline;
+    display: inline-block;
+    margin-right: 50px;
+    padding:20px;
+    float: right;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px 5px;
 
 }
 
-nav li a:hover:not(.active) {
+ul a:link {
     color: black;
+}
 
+nav li:hover {
+
+    font-size: 50px;
 }
 
 nav li a:visited {
     color: orange;
 
+}
+
+footer {
+
+    clear: right;
 }
