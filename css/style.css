@@ -1,13 +1,25 @@
 /* https://unsplash.com/photos/ICKXIX3RHQo */
 html {
-    background-image: url(/Images/restaurant1.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    opacity: 0.5;
+    background-color: grey
 }
 
-nav {
+body {
+    font-size: 20px;
+    color: black;
 
-    
+}
+
+nav li {
+    display: inline;
+
+}
+
+nav li a:hover:not(.active) {
+    color: black;
+
+}
+
+nav li a:visited {
+    color: orange;
+
 }
