@@ -7,7 +7,52 @@
     <link rel="stylesheet" href="css/reset.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <script src="https://kit.fontawesome.com/87928457bf.js"></script>
-    
+    <style>
+         form{
+            width: 600px;
+            border: 1px;
+            display:block; 
+            align-items: center;
+            margin-left: 100px;
+            text-align:left;
+        }
+        legend{
+            font-size: 30px;
+            color: orange;
+            font-weight: bold;
+            text-shadow: 1px 1px grey;
+        }
+        legend::first-letter{
+            font-size: 45px;
+        }
+        label.big{
+            font-size: 20px;
+            color: grey;
+            font-weight: bold;
+        }
+        textarea{
+            margin-left: 50px;
+        }
+        form input{
+            border: 2px dotted black;
+            flex-direction: row;
+            display: inline-block;
+        }
+        label{
+            color: grey;
+            font-weight: bold;
+            display: inline-block;
+        }
+        input#fname, input#lname, input#email, input#tel, textarea#feedback, select#method{
+            background-color: aliceblue;
+        }
+        input[type="radio"]{
+            width: 80px;
+        }
+        input#submit{
+            background-color:lightgray;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -29,6 +74,41 @@
         <div><hr></div>
         <div id="pri"></div>
         <div id="sec"></div>
+
+        <form action="action_page.php" method="post">
+            <legend>Feedback Page</legend>
+            <br><br>
+            <fieldset>
+                <label class="big">Customer Info:</label>
+                <br><br>
+                <label for="fname">First Name:</label>
+                    <input type="text" id="fname" placeholder="First Name" name="firstName" pattern="[A-Za-z]{30}" required><br><br>
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" placeholder="Last Name" name="lastName" required autofocus><br><br><br>          
+            </fieldset>
+            <label class="big">Feedback on:</label>
+            <br><br>
+            <input type="radio" name="feedback_related_to" value="Food Quality" id="food">
+            <label for="food">Food Quality</label><br>
+            <input type="radio" name="feedback_related_to" value="Service" id="service">
+            <label for="service">Service</label><br>
+            <input type="radio" name="feedback_related_to" value="Location" id="location">
+            <label for="location">Location</label><br>
+            <input type="radio" name="feedback_related_to" value="Others<br>" id="others">
+            <label for="others">Others</label><br>
+            <label for="method" class="big"><br>Preferred Method of Contact<br></label>
+            <select name="methods" id="method">
+            <option value="Phone">Phone</option><br>
+            <option value="Email" selected>Email</option><br>
+            </select><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="em" placeholder="Your Email" required><br>
+            <label for="tel">Phone Number</label>
+            <input type="tel" id="tel" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" ><br><br><br><br>
+            <label for="feedback" class="big">Provide your Feedback<br></label><br>
+            <textarea name="fback" id="feedback" cols="50" rows="10" style="color: grey;">Your Feedback Here!</textarea><br><br>
+            <input type="submit" id="submit" style="width: 80px;" value="Submit">
+     </form>
     </main>
     
     <footer>
