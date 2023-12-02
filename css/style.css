@@ -88,20 +88,22 @@ nav li a:visited {
   }
 
   #pri{
-    width: 10px;
-    height:100px;
+    width: 50px;
+    height:30px;
     background-color: gold;
     margin: 5px;
     position:relative;
     transform:translate(10px, 15px);
-    transition: (width 2s, height 5s, transform 3s);
+    transition: (width 2s, height 2s, transform 3s);
 }
 
 #pri:hover{
-    width: 650px;
-    height: 5px;
-    transform: rotate(180deg);
+    width: 50px;
+    height: 30px;
+    transform: rotate(-15deg);
     background-color: rgb(175, 200, 159);
+    left: 10px;
+    top: 0px;
     
 }
 
@@ -113,7 +115,7 @@ div#sec{
     animation-duration: 3s;
     animation-delay: 1.5s;
     animation-iteration-count: 3;
-    animation-direction: reverse;
+    animation-direction:normal;
     margin: 15px;
     position: relative;
 }
@@ -126,25 +128,26 @@ div#sec{
      }
      25% {
          background-color: rgb(201, 211, 206);
-        left: 100px;
-        top: 0px;
+        left: 0px;
+        top: 5px;
      }
      50% {
         background-color: rgb(175, 200, 159);
-        left: 200px;
-        top: 0px;
+        left: 0px;
+        top: 10px;
      }
      75% {
          background-color: rgb(164, 219, 164);
-         left: 100px;
-         top: 0px;
+         left: 0px;
+         top: 15px;
      }
      100% {
          background-color: rgb(108, 167, 168);
-         left: 50px;
-         top: 0px;
+         left: 0px;
+         top: 20px;
      }
  }
+
 
 /* style for footer */
 
