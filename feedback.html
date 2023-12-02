@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <script src="https://kit.fontawesome.com/87928457bf.js"></script>
     <style>
-         form{
+        form{
             width: 600px;
             border: 1px;
             display:block; 
@@ -16,13 +16,18 @@
             margin-left: 100px;
             text-align:left;
         }
-        legend{
+        h1, legend{
             font-size: 30px;
             color: orange;
             font-weight: bold;
             text-shadow: 1px 1px grey;
         }
-        legend::first-letter{
+
+        h1{
+            margin-left: 25px;
+        }
+
+        h1::first-letter{
             font-size: 45px;
         }
         label.big{
@@ -72,11 +77,11 @@
             </nav>
         </div>
         <div><hr></div>
-        <div id="pri"></div>
-        <div id="sec"></div>
+        
 
+        <h1>Feedback Page</h1>
         <form action="action_page.php" method="post">
-            <legend>Feedback Page</legend>
+            
             <br><br>
             <fieldset>
                 <label class="big">Customer Info:</label>
@@ -98,8 +103,8 @@
             <label for="others">Others</label><br>
             <label for="method" class="big"><br>Preferred Method of Contact<br></label>
             <select name="methods" id="method">
-            <option value="Phone">Phone</option><br>
-            <option value="Email" selected>Email</option><br>
+            <option value="Phone">Phone</option>
+            <option value="Email" selected>Email</option>
             </select><br><br>
             <label for="email">Email:</label>
             <input type="email" id="email" name="em" placeholder="Your Email" required><br>
@@ -109,6 +114,9 @@
             <textarea name="fback" id="feedback" cols="50" rows="10" style="color: grey;">Your Feedback Here!</textarea><br><br>
             <input type="submit" id="submit" style="width: 80px;" value="Submit">
      </form>
+     <div id="pri"></div>
+     <div id="sec"></div>
+     <img id="TeaCup" src="Images/TeaCup.bmp" alt="TeaCup" width="50">
     </main>
     
     <footer>
