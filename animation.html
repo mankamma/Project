@@ -49,14 +49,20 @@
         }
 
     </script>
+    
 </head>
 <body>
     <h1>Welcome to My Site</h1>
     <div id="container">
         <div id="animation"></div>
     </div>
-    
+        <form action="action.php" name="frm1" onsubmit="return validateForm">
+            <label for="fNAME">First Name</label>
+            <input type="text" name="fname" id="fNAME"><br><br><br>
+            <input type="submit" value="Submit">
+        </form>
     <button type="button" onclick="myMove()">Click Me!</button>
+    <script src="test.js" defer></script>
     <footer>
         <p>Author: Carrie</p>
     </footer>
