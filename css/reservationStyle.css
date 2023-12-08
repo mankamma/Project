@@ -4,6 +4,7 @@
     font-family: Poppins;
     src: url("/fonts/Poppins.ttf");
 }
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -58,7 +59,7 @@ form#form1{
     margin: 0 auto;
 }
 
-form select, form input{
+#form1 select, #form1 input{
     display: block;
     width: 100%;
     margin: 15px 12px;
@@ -71,11 +72,11 @@ form select, form input{
     font-weight: 300;
 }
 
-form input[type=text], form input::placeholder, select, #date{
+#form1 input[type=text], #form1 input::placeholder, select, #date{
     color: #9a9a9a;
 }
 
-form input[type=submit]{
+#form1 input[type=submit]{
     color: #fff;
     background: #f2745f;
     padding: 12px 0;
@@ -83,7 +84,7 @@ form input[type=submit]{
     cursor: pointer;
 }
 
-form input[type=submit]:hover{
+#form1 input[type=submit]:hover{
     opacity: 0.9;
 }
 
