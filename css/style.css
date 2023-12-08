@@ -287,6 +287,7 @@ hr{
 }
 
 .slider-wrapper {
+    display: flex; 
     position:relative;
     max-width: 48rem;
     margin: 0 auto;
@@ -317,12 +318,12 @@ hr{
     left:50%;
     transform: translateX(-50%);
     z-index:1;
-    gap:1rem;
+    gap:2rem;
 }
 
 .slider-nav a{
-    width: 0.6rem;
-    height: 0.6rem;
+    width: 0.7rem;
+    height: 0.7rem;
     border-radius: 50%;
     background-color: white;
     opacity: 0.75;
@@ -330,7 +331,7 @@ hr{
 }
 
 .slider-nav a:hover{
-    opacity: 100%;
+    background:#9a9a9a;
 }
 
 /* style for reservation page */
