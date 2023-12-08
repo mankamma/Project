@@ -334,6 +334,22 @@ hr{
     background:#9a9a9a;
 }
 
+/* style for about-button */
+
+#about-button{
+    background-color: rgb(175, 200, 159);
+    /* border: 1px; */
+    padding:10px;
+    /* font-weight: bold; */
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#about-button:hover{
+    background-color: #9a9a9a;
+    font-weight: bold;
+}
+
 /* style for reservation page */
 section.banner{
     min-height: 100vh;

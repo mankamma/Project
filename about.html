@@ -41,7 +41,7 @@
                 <p>Our skilled chefs craft each dim sum dish with precision, using the freshest ingredients and time
                     -honored techniques. From classic dumplings to innovative creations, our menu promises an authentic 
                     journey through the flavors of Chinese cuisine.</p><br>
-                <a href="reservation.html"><button>Make a reservation</button></a>
+                <button type="button" id="about-button" onclick="location.href='reservation.html'">Make a reservation!</button>
             </div>
             <div class="slider-wrapper">
                 <div class="slider">
@@ -60,16 +60,6 @@
         <div id="sec"></div> -->
         <!-- <img id="TeaCup" src="Images/TeaCup.bmp" alt="TeaCup" width="50"> -->
     </main>
-    <script type="text/javascript">
-        var counter=1;
-        setInterval(function(){
-            document.getElementById('slide-1'+counter).checked=true;
-            counter++;
-            if(counter>4){
-                counter=1;
-            }
-        },5000);
-    </script>
     <footer>
         <div class="row">
             <div class="col">
