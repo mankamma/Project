@@ -72,7 +72,7 @@ form#form1{
     font-weight: 300;
 }
 
-#form1 input[type=text], #form1 input::placeholder, select, #date{
+#form1 input[type=text], #form1 input::placeholder, #form1 select, #date{
     color: #9a9a9a;
 }
 
