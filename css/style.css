@@ -2,6 +2,17 @@ html {
     background-color: white;
 }
 
+@font-face {
+    font-family: Poppins;
+    src: url("/fonts/Poppins.ttf");
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 /* body style */
 body {
     margin: 0;
@@ -9,6 +20,8 @@ body {
     flex-direction: column;
     min-height: 100vh;
     box-sizing: inherit;
+    font-family: 'Poppins', sans-serif;
+
 }
 
 h2#menu1 {
@@ -321,24 +334,9 @@ hr{
 }
 
 /* style for reservation page */
-@font-face {
-    font-family: Poppins;
-    src: url("fonts/");
-}
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-body{
-    
-}
-
-.banner{
-    font-family: 'Poppins', sans-serif;
-    /* min-height: 100vh; */
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Images/bg.jpg) center/ cover no-repeat;
+section.banner{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/Images/bg.jpg) center/ cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -353,7 +351,7 @@ body{
 }
 
 .card-img{
-    background: url(Images/yum_cha.jpg) center/cover no-repeat;
+    background: url("/Images/yum_cha.jpg") center/cover no-repeat;
 }
 
 .banner h2{
