@@ -86,68 +86,101 @@ nav li a:visited {
     background-image: linear-gradient(45deg, rgb(211,211,211),rgb(185, 210, 198), rgb(175, 200, 159), rgb(164, 219, 164), rgb(108, 167, 168));
     
   }
+  #logo{
+    margin-left: 20px;
+    border: 2px dotted grey;
+    
+  }
 
-  #pri{
-    width: 50px;
-    height:30px;
-    background-color: gold;
+  #pot{
     margin: 5px;
-    position:relative;
-    transform:translate(10px, 15px);
-    transition: (width 2s, height 2s, transform 3s);
 }
 
-#pri:hover{
-    width: 50px;
-    height: 30px;
-    transform: rotate(-15deg);
-    background-color: rgb(175, 200, 159);
-    left: 10px;
-    top: 0px;
-    
+#pot:hover{
+    transform: rotate(-20deg);
 }
 
 div#sec{
-    width: 8px;
-    height:8px;
-    background-color: rgb(108, 167, 168);
+    padding-top: 1px;
+    width: 5px;
+    height:5px;
+    background-color: rgb(175, 200, 159);
     animation-name: myLine;
     animation-duration: 3s;
     animation-delay: 1.5s;
-    animation-iteration-count: 3;
+    animation-iteration-count: 10;
     animation-direction:normal;
-    margin: 15px;
-    position: relative;
+    margin-left: 20px;
 }
 
+
 @keyframes myLine {
-    0% {
-         background-color:  rgb(211,211,211);
-         left: 0px;
-         top: 0px;
-     }
-     25% {
-         background-color: rgb(201, 211, 206);
-        left: 0px;
-        top: 5px;
-     }
-     50% {
-        background-color: rgb(175, 200, 159);
-        left: 0px;
-        top: 10px;
-     }
-     75% {
-         background-color: rgb(164, 219, 164);
-         left: 0px;
-         top: 15px;
-     }
-     100% {
-         background-color: rgb(108, 167, 168);
-         left: 0px;
-         top: 20px;
-     }
+    0% {background-color:  white;
+        left: 20px;
+        top: 0px;}
+    20%{background-color:  rgb(211,211,211);
+         left: 20px;
+         top: 0px;}
+     40% {background-color: rgb(201, 211, 206);
+        left: 20px;
+        top: 5px;}
+     60% {background-color: rgb(175, 200, 159);
+        left: 20px;
+        top: 10px;}
+     80% {background-color: rgb(164, 219, 164);
+         left: 20px;
+         top: 15px;}
+     100% {background-color: rgb(108, 167, 168);
+         left: 20px;
+         top: 20px;}
  }
 
+ .container1{
+    display: grid;
+    grid-template-columns:auto 1fr;
+    grid-template-rows: auto 1fr;
+    align-items:center;
+ }
+ .logo{
+    grid-column: 1;
+    grid-row: 1 / span2;
+ }
+
+ .dumpling{
+    grid-column: 2;
+    grid-row: 2;
+ }
+
+ .container2{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    position:relative;
+ }
+ 
+ .pot{
+    grid-column: 4;
+    grid-row: 2;
+ }
+
+ #pot{
+    display:grid ;
+    padding-left: 20px;
+ }
+ 
+ #sec{
+    grid-column: 4;
+    grid-row: 2;
+
+ }
+
+ #cup{
+    padding-right: 15px;
+ }
+
+
+ #sec{
+    margin-top: 25px;
+ }
 
 /* style for footer */
 

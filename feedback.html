@@ -7,6 +7,19 @@
     <link rel="stylesheet" href="css/reset.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <script src="https://kit.fontawesome.com/87928457bf.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>    
+    <script>
+        $(document).ready(function(){
+        $("img#pot").hover(function(){
+            $("img#cup").css("transform","rotate(20deg)");
+            $("img#dumpling").css("transform","rotate(-25deg)");
+             $("div#sec").animate({left: '150px'});
+        }, function(){
+            $("img#cup").css("transform","rotate(0deg)");
+            $("img#dumpling").css("transform","rotate(0deg)");
+        });
+    });
+    </script>   
     <style>
         form{
             width: 600px;
@@ -60,10 +73,21 @@
     </style>
 </head>
 <body>
+    
     <header>
-        <img src="Images/HIC5.jpg" alt="website logo" width="150">
-        <img src="Images/shrimpdumpling.png" alt="website logo" width="100">
-        
+        <div class="container1">
+            <div class="logo">
+                <img id=logo src="Images/HIC6.jpg" alt="website logo" width="100">
+            </div> 
+            <div class="container2">
+                <div id="sec"></div>
+                <div class="pot">
+                <img id="pot" src="Images/pot6.png" alt="pot" height="70">
+                 <img id="cup" src="Images/cup1.png" alt="TeaCup" height="30">
+                <img id="dumpling" src="Images/shrimpdumpling.png" alt="website logo" height="30">
+                </div>
+            </div>
+        </div>
     </header>
     <main>
         <div class="nav">
@@ -78,7 +102,6 @@
         </div>
         <div><hr></div>
         
-
         <h1>Feedback Page</h1>
         <form action="action_page.php" method="post">
             
@@ -114,9 +137,6 @@
             <textarea name="fback" id="feedback" cols="50" rows="10" style="color: grey;">Your Feedback Here!</textarea><br><br>
             <input type="submit" id="submit" style="width: 80px;" value="Submit">
      </form>
-     <div id="pri"></div>
-     <div id="sec"></div>
-     <img id="TeaCup" src="Images/TeaCup.bmp" alt="TeaCup" width="50">
     </main>
     
     <footer>
