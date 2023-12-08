@@ -28,8 +28,72 @@
         <div id="pri"></div>
         <div id="sec"></div>
         <img id="TeaCup" src="Images/TeaCup.bmp" alt="TeaCup" width="50">
-    </main>
 
+        <section class = "banner">
+            <h2>MAKE YOUR BOOKING REQUEST NOW!</h2>
+            <div class = "card-container">
+                <div class = "card-img">
+                    <!-- image here -->
+                </div>
+    
+                <div class = "card-content">
+                    <h3>Reservation</h3>
+                    <form action="" id="form1">
+                        <div class = "form-row">
+                            <input id="date" name="setTodaysDate" type="date">
+                            <!-- script reference to https://jsfiddle.net/emrebolat/06xuefmx/ -->
+                                <script>
+                                    var today = new Date().toISOString().split('T')[0];
+                                    document.getElementsByName("setTodaysDate")[0].setAttribute('min', today);
+                                </script>
+    
+                            <select name = "time">
+                                <option value = "time-select">Time</option>
+                                <option value = "1">10:00 AM</option>
+                                <option value = "2">11:00 AM</option>
+                                <option value = "3">12:00 PM</option>
+                                <option value = "4">1:00 PM</option>
+                                <option value = "5">2:00 PM</option>
+                                <option value = "6">3:00 PM</option>
+                                <option value = "7">4:00 PM</option>
+                                <option value = "8">5:00 PM</option>
+                                <option value = "9">6:00 PM</option>
+                                <option value = "10">7:00 PM</option>
+                                <option value = "11">8:00 PM</option>
+                            </select>
+                        </div>
+    
+                        <div class = "form-row">
+                            <input type="text" name="name" placeholder="Full Name">
+                            <input type="text" name="phone" placeholder="Phone Number" pattern="[0-9]{10}" >
+                        </div>
+    
+                        <div class = "form-row">
+                            <select name="guests">
+                                <option value="guests-select">Guests Number</option>
+                                <option value="1">1 Guest</option>
+                                <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="5">5 Guests</option>
+                                <option value="6">6 Guests</option>
+                                <option value="7">7 Guests</option>
+                                <option value="8">8 Guests</option>
+                                <option value="9">9 Guests</option>
+                                <option value="10">10 Guests</option>
+                                <option value="11">11 Guests</option>
+                                <option value="12">12 Guests</option>
+                            </select>
+                            <input type = "submit" onclick="validateText()" value = "REQUEST A TABLE">
+                        </div>
+                    </form>
+                    <p id="error"></p>
+    
+                </div>
+            </div>
+        </section>
+    </main>
+    
     <footer>
         <div class = "row">
             <div class = "col">
@@ -56,6 +120,7 @@
         </div>
             <hr>
             <p class = "copyright">Copyright &copy;2023 HIC</p>
+            <script src="project.js"></script>
     </footer>
 </body>
 </html>
