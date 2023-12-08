@@ -371,13 +371,6 @@ section.banner{
     font-size: 26px;
 }
 
-section#frm {
-
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
 .form-row{
     display: block;
     width: 90%;
