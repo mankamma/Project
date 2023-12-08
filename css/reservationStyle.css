@@ -54,7 +54,7 @@ form#form1{
 }
 
 .form-row{
-    display: flex;
+    display: block;
     width: 90%;
     margin: 0 auto;
 }
