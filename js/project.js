@@ -6,8 +6,6 @@ function validateText(){
     let phone = document.forms["form1"]["phone"].value;
 
     if ( date === ""){
-        document.getElementById("error").style.color = "red";
-        document.getElementById("error").style.fontSize = "larger";
         document.getElementById("error").innerHTML = "Please select a date.";
     }
 
