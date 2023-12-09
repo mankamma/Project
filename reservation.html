@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/reservationStyle.css" type="text/css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/87928457bf.js"></script>
 </head>
@@ -30,25 +31,25 @@
         <div id="sec"></div>
         <img id="TeaCup" src="Images/TeaCup.bmp" alt="TeaCup" width="50">
 
-        <section class="banner">
+        <section class="banner" id="res">
             <h2>MAKE YOUR BOOKING REQUEST NOW!</h2>
-            <div class="card-container">
-                <div class="card-img">
+            <div class="card-container" id="resContainer">
+                <div class="card-img" id="cardImg">
                     
                 </div>
     
-                <div class="card-content">
+                <div class="card-content" id="resContent">
                 <h3>Reservation</h3>
-                <form action="" id="form1">
-                    <div class="form-row">
-                        <input id="date" name="setTodaysDate" type="date">
+                <form action="" id="resForm1">
+                    <div class="form-row" id="row">
+                        <input id="resFormInput1" name="setTodaysDate" type="date">
                         <!-- script reference to https://jsfiddle.net/emrebolat/06xuefmx/ -->
                             <script>
                                 var today = new Date().toISOString().split('T')[0];
                                 document.getElementsByName("setTodaysDate")[0].setAttribute('min', today);
                             </script>
 
-                        <select name="time">
+                        <select name="time" id="resFormSelect">
                             <option value="time-select">Time</option>
                             <option value="1">10:00 AM</option>
                             <option value="2">11:00 AM</option>
@@ -64,13 +65,13 @@
                         </select>
                     </div>
 
-                    <div class="form-row">
-                        <input type="text" name="name" placeholder="Full Name">
-                        <input type="text" name="phone" placeholder="Phone Number" pattern="[0-9]{10}" >
+                    <div class="form-row" id="row">
+                        <input id="resFormInput" type="text" name="name" placeholder="Full Name">
+                        <input id="resFormInput" type="text" name="phone" placeholder="Phone Number" pattern="[0-9]{10}" >
                     </div>
                     
-                    <div class="form-row">
-                        <select name="guests">
+                    <div class="form-row" id="row">
+                        <select name="guests" id="formSelect">
                             <option value="guests-select">Guests Number</option>
                             <option value="1">1 Guest</option>
                             <option value="2">2 Guests</option>
@@ -85,7 +86,7 @@
                             <option value="11">11 Guests</option>
                             <option value="12">12 Guests</option>
                         </select>
-                        <input type="submit" onclick="validateText()" value="REQUEST A TABLE">
+                        <input id="resFormInput" type="submit" onclick="validateText()" value="REQUEST A TABLE">
                     </div>
                 </form>
                 <p id="error"></p>
