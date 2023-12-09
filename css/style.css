@@ -243,7 +243,7 @@ footer{
     margin: 10px 0;
 }
 
-form{
+footer form{
     padding-bottom: 10px;
     display: flex;
     align-items: center;
@@ -251,7 +251,7 @@ form{
     margin-bottom: 50px;
 }
 
-form input{
+footer form input{
     margin-left: 5px;
     width: 100%;
     background: transparent;
@@ -260,7 +260,7 @@ form input{
     outline: none;
     }
 
-form button{
+footer form button{
     background: transparent;
     color: black;
     border: 0;
