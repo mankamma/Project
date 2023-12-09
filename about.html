@@ -8,14 +8,42 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/87928457bf.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+    <script>
+        $(document).ready(function(){
+        $("img#ypot").hover(function(){
+            $("img#ycup").css("transform","rotate(20deg)");
+            $("img#ydumpling").css("transform","rotate(-25deg)");
+            $("div#ydrop1").fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+            $("div#ydrop2").fadeOut(50).fadeIn(50).fadeOut(50).fadeIn(50);
+            $("div#ydrop3").fadeOut(80).fadeIn(80).fadeOut(80).fadeIn(80);
+        }, function(){
+            $("img#ycup").css("transform","rotate(0deg)");
+            $("img#ydumpling").css("transform","rotate(0deg)");
+        });
+    });
+    </script>  
 </head>
 <body>
     <header>
         <div class="announcement">
-            <p>Opening in Jan 2024!</p>
+            <p>10% discount offered from Dec 15-20th!</p>
         </div>
-        <img src="Images/HIC5.jpg" alt="website logo" width="150">
-        <img src="Images/shrimpdumpling.png" alt="website logo" width="100">
+        <div class="ycontainer1">
+            <div class="ylogo">
+                <img id=ylogo src="Images/HIC5.jpg" alt="website logo" width="100">
+            </div> 
+            <div class="ycontainer2">
+                <div id="ydrop1"></div>
+                <div id="ydrop2"></div>
+                <div id="ydrop3"></div>
+                <div class="yAnimation">
+                <img id="ypot" src="Images/pot6.png" alt="pot" height="70">
+                <img id="ycup" src="Images/cup1.png" alt="TeaCup" height="30">
+                <img id="ydumpling" src="Images/shrimpdumpling.png" alt="website logo" height="25">
+                </div>
+            </div>
+        </div>
     </header>
     <main>
         <div class="nav">
@@ -56,9 +84,7 @@
                 </div>
             </div>
         </div>
-        <!-- <div id="pri"></div>
-        <div id="sec"></div> -->
-        <!-- <img id="TeaCup" src="Images/TeaCup.bmp" alt="TeaCup" width="50"> -->
+   
     </main>
     <footer>
         <div class="row">

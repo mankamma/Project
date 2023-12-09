@@ -9,11 +9,42 @@
     <link rel="stylesheet" href="css/reservationStyle.css" type="text/css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/87928457bf.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+    <script>
+        $(document).ready(function(){
+        $("img#ypot").hover(function(){
+            $("img#ycup").css("transform","rotate(20deg)");
+            $("img#ydumpling").css("transform","rotate(-25deg)");
+            $("div#ydrop1").fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+            $("div#ydrop2").fadeOut(50).fadeIn(50).fadeOut(50).fadeIn(50);
+            $("div#ydrop3").fadeOut(80).fadeIn(80).fadeOut(80).fadeIn(80);
+        }, function(){
+            $("img#ycup").css("transform","rotate(0deg)");
+            $("img#ydumpling").css("transform","rotate(0deg)");
+        });
+    });
+    </script>  
 </head>
 <body>
     <header>
-        <img src="Images/HIC5.jpg" alt="website logo" width="150">
-        <img src="Images/shrimpdumpling.png" alt="website logo" width="100">
+        <div class="announcement">
+            <p>10% discount offered from Dec 15-20th!</p>
+        </div>
+        <div class="ycontainer1">
+            <div class="ylogo">
+                <img id=ylogo src="Images/HIC5.jpg" alt="website logo" width="100">
+            </div> 
+            <div class="ycontainer2">
+                <div id="ydrop1"></div>
+                <div id="ydrop2"></div>
+                <div id="ydrop3"></div>
+                <div class="yAnimation">
+                <img id="ypot" src="Images/pot6.png" alt="pot" height="70">
+                <img id="ycup" src="Images/cup1.png" alt="TeaCup" height="30">
+                <img id="ydumpling" src="Images/shrimpdumpling.png" alt="website logo" height="25">
+                </div>
+            </div>
+        </div>
     </header>
     <main>
         <div class="nav">
@@ -27,11 +58,8 @@
             </nav>
         </div>
         <div><hr></div>
-        <div id="pri"></div>
-        <div id="sec"></div>
-        <img id="TeaCup" src="Images/TeaCup.bmp" alt="TeaCup" width="50">
 
-        <section class="banner" id="res">
+        <section class = "banner">
             <h2>MAKE YOUR BOOKING REQUEST NOW!</h2>
             <div class="card-container" id="resContainer">
                 <div class="card-img" id="cardImg">
@@ -97,17 +125,17 @@
     </main>
     
     <footer>
-        <div class = "row">
-            <div class = "col">
+        <div class="row">
+            <div class="col">
                 <h3>Opening hours</h3>
                 <p>Monday-Friday: 10am - 10pm</p>
                 <p>Saturday-Sunday: 9am - 10pm</p>
             </div>
-            <div class ="col">
+            <div class="col">
                 <h3>Contact</h3>
                 <p>205 Humber College Blvd</p>
                 <p>Etobicoke, ON M9W 5L7</p>
-                <p class = "email">hic@gmail.com</p>
+                <p class="email">hic@gmail.com</p>
                 <h4>998-000-5555</h4>
             </div>
 
@@ -115,12 +143,12 @@
                 <h3>Subscribe to receive news and updates</h3>
                 <form>
                     <i class="fa-regular fa-envelope"></i>
-                    <input type = "email" placeholder = "Enter your email address" required>
-                    <button type = "submit"><i class="fa-solid fa-arrow-right"></i></button>
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
                 </form>
             </div>
         </div>
-            <p class = "copyright">Copyright &copy;2023 HIC</p>
+            <p class="copyright">Copyright &copy;2023 HIC</p>
             <script src="js/project.js" defer></script>
     </footer>
 </body>

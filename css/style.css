@@ -77,6 +77,13 @@ hr{
     border-bottom: 1px solid black;
 }
 
+hr{
+    width:100%;
+    border:0;
+    border-bottom: 1px solid black;
+}
+
+/* style for announcement on About us page */
 .announcement {
     display: inline-block;
     height: 110%;
@@ -100,31 +107,61 @@ hr{
     color: red;
   }
 
+  /*style for header with animation */
   header{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-image: linear-gradient(45deg, rgb(211,211,211),rgb(185, 210, 198), rgb(175, 200, 159), rgb(164, 219, 164), rgb(108, 167, 168));
     
   }
-  #logo{
+  #ylogo{
     margin-left: 20px;
-    border: 2px dotted grey;
-    
   }
 
-  #pot{
+  #ypot{
     margin: 5px;
 }
 
-#pot:hover{
+#ypot:hover{
     transform: rotate(-20deg);
+    
 }
 
-div#sec{
-    padding-top: 1px;
+
+div#ydrop1{
+    border-radius: 30px 30px 30px 30px ;
+    padding-top: 5px;
     width: 5px;
-    height:5px;
+    height:20px;
+    background-color: lightgrey;
+    animation-name: yLine1;
+    animation-duration: 3s;
+    animation-delay: 1.5s;
+    animation-iteration-count: 10;
+    animation-direction:normal;
+    margin-left: 20px;
+}
+
+div#ydrop2{
+    border-radius: 40px 40px 40px 40px ;
+    padding-top: 5px;
+    width: 5px;
+    height:10px;
+    background-color: aliceblue;
+    animation-name: yLine2;
+    animation-duration: 3s;
+    animation-delay: 1.5s;
+    animation-iteration-count: 10;
+    animation-direction:normal;
+    margin-left: 20px;
+}
+
+div#ydrop3{
+    border-radius: 40px 40px 40px 40px ;
+    padding-top: 25px;
+    width: 5px;
+    height:10px;
     background-color: rgb(175, 200, 159);
-    animation-name: myLine;
+    animation-name: yLine3;
     animation-duration: 3s;
     animation-delay: 1.5s;
     animation-iteration-count: 10;
@@ -133,73 +170,124 @@ div#sec{
 }
 
 
-@keyframes myLine {
-    0% {background-color:  white;
-        left: 20px;
-        top: 0px;}
-    20%{background-color:  rgb(211,211,211);
-         left: 20px;
-         top: 0px;}
-     40% {background-color: rgb(201, 211, 206);
+@keyframes yLine1 {
+    0% {background-color:  green;
         left: 20px;
         top: 5px;}
-     60% {background-color: rgb(175, 200, 159);
+    20%{background-color:  rgb(211,211,211);
+         left: 20px;
+         top: 5px;}
+     40% {background-color: rgb(201, 211, 206);
         left: 20px;
         top: 10px;}
+     60% {background-color: rgb(175, 200, 159);
+        left: 20px;
+        top: 15px;}
      80% {background-color: rgb(164, 219, 164);
          left: 20px;
-         top: 15px;}
+         top: 20px;}
      100% {background-color: rgb(108, 167, 168);
          left: 20px;
-         top: 20px;}
+         top: 25px;}
+}
+
+@keyframes yLine2 {
+    0% {background-color:  aliceblue;
+        left: 20px;
+        top: 10px;}
+    20%{background-color:  rgb(211,211,211);
+         left: 20px;
+         top: 10px;}
+     40% {background-color: rgb(201, 211, 206);
+        left: 20px;
+        top: 15px;}
+     60% {background-color: rgb(175, 200, 159);
+        left: 20px;
+        top: 20px;}
+     80% {background-color: rgb(164, 219, 164);
+         left: 20px;
+         top: 25px;}
+     100% {background-color: rgb(108, 167, 168);
+         left: 20px;
+         top: 30px;}
  }
 
- .container1{
+ @keyframes yLine3 {
+    0% {background-color:  green;
+        left: 20px;
+        top: 15px;}
+    20%{background-color:  rgb(211,211,211);
+         left: 20px;
+         top: 15px;}
+     40% {background-color: rgb(201, 211, 206);
+        left: 20px;
+        top: 20px;}
+     60% {background-color: rgb(175, 200, 159);
+        left: 20px;
+        top: 25px;}
+     80% {background-color: rgb(164, 219, 164);
+         left: 20px;
+         top: 30px;}
+     100% {background-color: rgb(108, 167, 168);
+         left: 20px;
+         top: 35px;}
+}
+
+
+.ycontainer1{
     display: grid;
     grid-template-columns:auto 1fr;
     grid-template-rows: auto 1fr;
     align-items:center;
  }
- .logo{
+ .ylogo{
     grid-column: 1;
     grid-row: 1 / span2;
  }
 
- .dumpling{
+ .ydumpling{
     grid-column: 2;
     grid-row: 2;
  }
 
- .container2{
+ .ycontainer2{
     display: grid;
     grid-template-columns:1fr 1fr 1fr;
     position:relative;
  }
  
- .pot{
+ .yAnimation{
     grid-column: 4;
     grid-row: 2;
  }
 
- #pot{
+ 
+ #ypot{
     display:grid ;
     padding-left: 20px;
  }
  
- #sec{
+ #ydrop1{
     grid-column: 4;
     grid-row: 2;
-
+    margin-top: 25px;
  }
 
- #cup{
+ #ydrop2{
+    grid-column: 4;
+    grid-row: 2;
+    margin-top: 33px;
+ }
+ #ydrop3{
+    grid-column: 4;
+    grid-row: 2;
+    margin-top: 41px;
+ }
+
+ #ycup{
     padding-right: 15px;
  }
 
-
- #sec{
-    margin-top: 25px;
- }
 
 /* style for footer */
 
@@ -298,7 +386,7 @@ footer form button{
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    box-shadow: 10px 10px 10px black;
     border-radius: 1.5rem;
     overflow-x: hidden;
 }
@@ -325,8 +413,7 @@ footer form button{
     height: 0.7rem;
     border-radius: 50%;
     background-color: white;
-    opacity: 0.75;
-    transition: opacity ease 250ms;
+    opacity: 0.8;
 }
 
 .slider-nav a:hover{
@@ -337,9 +424,7 @@ footer form button{
 
 #about-button{
     background: #f2745f;
-    /* border: 1px; */
     padding:10px;
-    /* font-weight: bold; */
     border-radius: 4px;
     cursor: pointer;
     font-size: 18px;

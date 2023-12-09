@@ -11,18 +11,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>    
     <script>
         $(document).ready(function(){
-        $("img#pot").hover(function(){
-            $("img#cup").css("transform","rotate(20deg)");
-            $("img#dumpling").css("transform","rotate(-25deg)");
-             $("div#sec").animate({left: '150px'});
+        $("img#ypot").hover(function(){
+            $("img#ycup").css("transform","rotate(20deg)");
+            $("img#ydumpling").css("transform","rotate(-25deg)");
+            $("div#ydrop1").fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+            $("div#ydrop2").fadeOut(50).fadeIn(50).fadeOut(50).fadeIn(50);
+            $("div#ydrop3").fadeOut(80).fadeIn(80).fadeOut(80).fadeIn(80);
         }, function(){
-            $("img#cup").css("transform","rotate(0deg)");
-            $("img#dumpling").css("transform","rotate(0deg)");
+            $("img#ycup").css("transform","rotate(0deg)");
+            $("img#ydumpling").css("transform","rotate(0deg)");
         });
     });
     </script>   
     <style>
-        form{
+        #yForm{
             width: 600px;
             border: 1px;
             display:block; 
@@ -30,62 +32,67 @@
             margin-left: 100px;
             text-align:left;
         }
-        h1, legend{
+        #yh1, #yForm legend{
             font-size: 30px;
             color: orange;
             font-weight: bold;
             text-shadow: 1px 1px grey;
         }
 
-        h1{
+        #yh1{
             margin-left: 25px;
         }
 
-        h1::first-letter{
+        #yh1::first-letter{
             font-size: 45px;
         }
-        label.big{
+        #yForm label.big{
             font-size: 20px;
             color: grey;
             font-weight: bold;
         }
-        textarea{
+        #yForm textarea{
+            margin-top: 15px;
             margin-left: 50px;
         }
-        form input{
+        #yForm input, #yForm select, #yForm textarea{
             border: 2px dotted black;
             flex-direction: row;
             display: inline-block;
         }
-        label{
+        #yForm label, #yForm select{
             color: grey;
             font-weight: bold;
             display: inline-block;
         }
-        input#fname, input#lname, input#email, input#tel, textarea#feedback, select#method{
+        #yForm input#fname, #yForm input#lname, #yForm input#email, #yForm input#tel, #yForm textarea#feedback, #yForm select{
             background-color: aliceblue;
         }
-        input[type="radio"]{
+        #yForm input[type="radio"]{
             width: 80px;
         }
-        input#submit{
-            background-color:lightgray;
-        }
+
+
     </style>
 </head>
 <body>
     
     <header>
-        <div class="container1">
-            <div class="logo">
-                <img id=logo src="Images/HIC6.jpg" alt="website logo" width="100">
+        <div class="announcement">
+            <p>10% discount offered from Dec 15-20th!</p>
+        </div>
+        <div class="ycontainer1">
+            <div class="ylogo">
+                <img id=ylogo src="Images/HIC5.jpg" alt="website logo" width="100">
             </div> 
-            <div class="container2">
-                <div id="sec"></div>
-                <div class="pot">
-                <img id="pot" src="Images/pot6.png" alt="pot" height="70">
-                 <img id="cup" src="Images/cup1.png" alt="TeaCup" height="30">
-                <img id="dumpling" src="Images/shrimpdumpling.png" alt="website logo" height="30">
+            <div class="ycontainer2">
+                <div id="ydrop1"></div>
+                <div id="ydrop2"></div>
+                <div id="ydrop3"></div>
+                <div class="yAnimation">
+                <img id="ypot" src="Images/pot6.png" alt="pot" height="70">
+                <img id="ycup" src="Images/cup1.png" alt="TeaCup" height="30">
+                <img id="ydumpling" src="Images/shrimpdumpling.png" alt="website logo" height="25">
                 </div>
             </div>
         </div>
@@ -103,17 +110,16 @@
         </div>
         <div><hr></div>
         
-        <h1>Feedback Page</h1>
-        <form action="action_page.php" method="post">
-            
+        <h1 id="yh1">Feedback Page</h1>
+        <form id="yForm" method="post">
             <br><br>
             <fieldset>
                 <label class="big">Customer Info:</label>
                 <br><br>
-                <label for="fname">First Name:</label>
-                    <input type="text" id="fname" placeholder="First Name" name="firstName" pattern="[A-Za-z]{30}" required><br><br>
-                    <label for="lname">Last Name:</label>
-                    <input type="text" id="lname" placeholder="Last Name" name="lastName" required autofocus><br><br><br>          
+                <label for="firstName">First Name:</label><br>
+                <input type="text" id="firstName" placeholder="First Name" name="firstName" required><br><br>
+                <label for="lastName">Last Name:</label><br>
+                <input type="text" id="lastName" placeholder="Last Name" name="lastName" required><br><br><br>
             </fieldset>
             <label class="big">Feedback on:</label>
             <br><br>
@@ -123,21 +129,63 @@
             <label for="service">Service</label><br>
             <input type="radio" name="feedback_related_to" value="Location" id="location">
             <label for="location">Location</label><br>
-            <input type="radio" name="feedback_related_to" value="Others<br>" id="others">
-            <label for="others">Others</label><br>
-            <label for="method" class="big"><br>Preferred Method of Contact<br></label>
+            <input type="radio" name="feedback_related_to" value="Others " id="others">
+            <label for="others">Others</label><br><br><br>
+            <label class="big">Your Contact Details:<br></label>
+            <br><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="contact" placeholder="Your Email" required><br><br>
+            <label for="tel">Phone number:</label><br>
+            <input type="tel" id="tel" name="contact" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+            <br>
+            <label for="method">Preferred Method of Contact</label><br>
             <select name="methods" id="method">
-            <option value="Phone">Phone</option>
-            <option value="Email" selected>Email</option>
-            </select><br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="em" placeholder="Your Email" required><br>
-            <label for="tel">Phone Number</label>
-            <input type="tel" id="tel" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" ><br><br><br><br>
+                <option value="Phone">Phone</option>
+                <option value="Email" selected>Email</option>
+            </select><br><br><br><br>
             <label for="feedback" class="big">Provide your Feedback<br></label><br>
             <textarea name="fback" id="feedback" cols="50" rows="10" style="color: grey;">Your Feedback Here!</textarea><br><br>
-            <input type="submit" id="submit" style="width: 80px;" value="Submit">
-     </form>
+            <input type="button" id="submit" style="width: 80px; height: 50px; color: white; background-color:orange; font-size: 15px; border-radius: 4px;" onclick="submitFeedback()" value="Submit"><br><br>
+            <div id="error"></div>
+        </form>
+        
+        <script>
+            function submitFeedback() {
+                let firstName = document.getElementById("firstName").value;
+                let lastName = document.getElementById("lastName").value;
+                let feedback_related_to = document.querySelector('input[name="feedback_related_to"]:checked');
+                let email = document.getElementById("email").value;
+                let tel = document.getElementById("tel").value;
+                let methods = document.getElementById("method").value;
+        
+                document.getElementById("error").innerHTML = "";
+        
+                if (firstName === "") {
+                    showError("Please input your first name.");
+                } else if (lastName === "") {
+                    showError("Please input your last name");
+                } else if (!feedback_related_to) {
+                    showError("Please select your feedback relates to.");
+                } else if (email === "") {
+                    showError("Please fill in your email.");
+                } else if (tel === "") {
+                    showError("Please fill in your phone number.");
+                } else if (methods === "") {
+                    showError("Please fill in your preferred methods.");
+                } else {
+                    alert("Your feedback has been received. Thank you.");
+                    document.getElementById("yForm").reset();
+                }
+            }
+        
+            function showError(message) {
+                let errorElement = document.getElementById("error");
+                errorElement.style.color = "red";
+                errorElement.style.fontSize = "larger";
+                errorElement.innerHTML = message;
+            }
+        </script>
+        
     </main>
     
     <footer>
