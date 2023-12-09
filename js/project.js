@@ -1,9 +1,9 @@
 function validateText(){
 
-    let date = document.forms["form1"]["setTodaysDate"].value;
-    let time = document.forms["form1"]["time"].value;
-    let name = document.forms["form1"]["name"].value;
-    let phone = document.forms["form1"]["phone"].value;
+    let date = document.forms["resForm1"]["setTodaysDate"].value;
+    let time = document.forms["resForm1"]["time"].value;
+    let name = document.forms["resForm1"]["name"].value;
+    let phone = document.forms["resForm1"]["phone"].value;
 
     if ( date === ""){
         document.getElementById("error").innerHTML = "Please select a date.";
