@@ -386,7 +386,7 @@ footer form button{
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    box-shadow: 10px 10px 10px black;
     border-radius: 1.5rem;
     overflow-x: hidden;
 }
@@ -413,8 +413,7 @@ footer form button{
     height: 0.7rem;
     border-radius: 50%;
     background-color: white;
-    opacity: 0.75;
-    transition: opacity ease 250ms;
+    opacity: 0.8;
 }
 
 .slider-nav a:hover{
@@ -425,9 +424,7 @@ footer form button{
 
 #about-button{
     background: #f2745f;
-    /* border: 1px; */
     padding:10px;
-    /* font-weight: bold; */
     border-radius: 4px;
     cursor: pointer;
     font-size: 18px;
