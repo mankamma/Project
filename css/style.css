@@ -71,6 +71,13 @@ nav li a:visited {
 
 }
 
+hr{
+    width:100%;
+    border:0;
+    border-bottom: 1px solid black;
+}
+
+/* style for announcement on About us page */
 .announcement {
     display: inline-block;
     height: 110%;
@@ -94,31 +101,61 @@ nav li a:visited {
     color: red;
   }
 
+  /*style for header with animation */
   header{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-image: linear-gradient(45deg, rgb(211,211,211),rgb(185, 210, 198), rgb(175, 200, 159), rgb(164, 219, 164), rgb(108, 167, 168));
     
   }
-  #logo{
+  #ylogo{
     margin-left: 20px;
-    border: 2px dotted grey;
-    
   }
 
-  #pot{
+  #ypot{
     margin: 5px;
 }
 
-#pot:hover{
+#ypot:hover{
     transform: rotate(-20deg);
+    
 }
 
-div#sec{
-    padding-top: 1px;
+
+div#ydrop1{
+    border-radius: 30px 30px 30px 30px ;
+    padding-top: 5px;
     width: 5px;
-    height:5px;
+    height:20px;
+    background-color: lightgrey;
+    animation-name: yLine1;
+    animation-duration: 3s;
+    animation-delay: 1.5s;
+    animation-iteration-count: 10;
+    animation-direction:normal;
+    margin-left: 20px;
+}
+
+div#ydrop2{
+    border-radius: 40px 40px 40px 40px ;
+    padding-top: 5px;
+    width: 5px;
+    height:10px;
+    background-color: aliceblue;
+    animation-name: yLine2;
+    animation-duration: 3s;
+    animation-delay: 1.5s;
+    animation-iteration-count: 10;
+    animation-direction:normal;
+    margin-left: 20px;
+}
+
+div#ydrop3{
+    border-radius: 40px 40px 40px 40px ;
+    padding-top: 25px;
+    width: 5px;
+    height:10px;
     background-color: rgb(175, 200, 159);
-    animation-name: myLine;
+    animation-name: yLine3;
     animation-duration: 3s;
     animation-delay: 1.5s;
     animation-iteration-count: 10;
@@ -127,73 +164,124 @@ div#sec{
 }
 
 
-@keyframes myLine {
-    0% {background-color:  white;
-        left: 20px;
-        top: 0px;}
-    20%{background-color:  rgb(211,211,211);
-         left: 20px;
-         top: 0px;}
-     40% {background-color: rgb(201, 211, 206);
+@keyframes yLine1 {
+    0% {background-color:  green;
         left: 20px;
         top: 5px;}
-     60% {background-color: rgb(175, 200, 159);
+    20%{background-color:  rgb(211,211,211);
+         left: 20px;
+         top: 5px;}
+     40% {background-color: rgb(201, 211, 206);
         left: 20px;
         top: 10px;}
+     60% {background-color: rgb(175, 200, 159);
+        left: 20px;
+        top: 15px;}
      80% {background-color: rgb(164, 219, 164);
          left: 20px;
-         top: 15px;}
+         top: 20px;}
      100% {background-color: rgb(108, 167, 168);
          left: 20px;
-         top: 20px;}
+         top: 25px;}
+}
+
+@keyframes yLine2 {
+    0% {background-color:  aliceblue;
+        left: 20px;
+        top: 10px;}
+    20%{background-color:  rgb(211,211,211);
+         left: 20px;
+         top: 10px;}
+     40% {background-color: rgb(201, 211, 206);
+        left: 20px;
+        top: 15px;}
+     60% {background-color: rgb(175, 200, 159);
+        left: 20px;
+        top: 20px;}
+     80% {background-color: rgb(164, 219, 164);
+         left: 20px;
+         top: 25px;}
+     100% {background-color: rgb(108, 167, 168);
+         left: 20px;
+         top: 30px;}
  }
 
- .container1{
+ @keyframes yLine3 {
+    0% {background-color:  green;
+        left: 20px;
+        top: 15px;}
+    20%{background-color:  rgb(211,211,211);
+         left: 20px;
+         top: 15px;}
+     40% {background-color: rgb(201, 211, 206);
+        left: 20px;
+        top: 20px;}
+     60% {background-color: rgb(175, 200, 159);
+        left: 20px;
+        top: 25px;}
+     80% {background-color: rgb(164, 219, 164);
+         left: 20px;
+         top: 30px;}
+     100% {background-color: rgb(108, 167, 168);
+         left: 20px;
+         top: 35px;}
+}
+
+
+.ycontainer1{
     display: grid;
     grid-template-columns:auto 1fr;
     grid-template-rows: auto 1fr;
     align-items:center;
  }
- .logo{
+ .ylogo{
     grid-column: 1;
     grid-row: 1 / span2;
  }
 
- .dumpling{
+ .ydumpling{
     grid-column: 2;
     grid-row: 2;
  }
 
- .container2{
+ .ycontainer2{
     display: grid;
     grid-template-columns:1fr 1fr 1fr;
     position:relative;
  }
  
- .pot{
+ .yAnimation{
     grid-column: 4;
     grid-row: 2;
  }
 
- #pot{
+ 
+ #ypot{
     display:grid ;
     padding-left: 20px;
  }
  
- #sec{
+ #ydrop1{
     grid-column: 4;
     grid-row: 2;
-
+    margin-top: 25px;
  }
 
- #cup{
+ #ydrop2{
+    grid-column: 4;
+    grid-row: 2;
+    margin-top: 33px;
+ }
+ #ydrop3{
+    grid-column: 4;
+    grid-row: 2;
+    margin-top: 41px;
+ }
+
+ #ycup{
     padding-right: 15px;
  }
 
-
- #sec{
-    margin-top: 25px;
- }
 
 /* style for footer */
 
@@ -215,7 +303,7 @@ footer{
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .col{
@@ -237,7 +325,7 @@ footer{
     margin: 10px 0;
 }
 
-form{
+footer form{
     padding-bottom: 10px;
     display: flex;
     align-items: center;
@@ -245,36 +333,29 @@ form{
     margin-bottom: 50px;
 }
 
-form input{
+footer form input{
     margin-left: 5px;
     width: 100%;
     background: transparent;
     color: black;
     border: 0;
     outline: none;
-}
+    }
 
-form button{
+footer form button{
     background: transparent;
     color: black;
     border: 0;
     outline: none;
     cursor: pointer;
-}
+    }
 
-hr{
-    width:100%;
-    border:0;
-    border-bottom: 1px solid black;
-}
 
 .copyright{
     width:100%;
     text-align: center;
+    border-top: 1px solid black;
 }
-
-
-
 
 
 /* style for About Us page */
@@ -287,6 +368,7 @@ hr{
 }
 
 .slider-wrapper {
+    display: flex; 
     position:relative;
     max-width: 48rem;
     margin: 0 auto;
@@ -299,7 +381,7 @@ hr{
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-    border-radius: 0.5rem;
+    border-radius: 1.5rem;
     overflow-x: hidden;
 }
 
@@ -317,12 +399,12 @@ hr{
     left:50%;
     transform: translateX(-50%);
     z-index:1;
-    gap:1rem;
+    gap:2rem;
 }
 
 .slider-nav a{
-    width: 0.6rem;
-    height: 0.6rem;
+    width: 0.7rem;
+    height: 0.7rem;
     border-radius: 50%;
     background-color: white;
     opacity: 0.75;
@@ -330,87 +412,24 @@ hr{
 }
 
 .slider-nav a:hover{
-    opacity: 100%;
+    background:#9a9a9a;
 }
 
-/* style for reservation page */
-section.banner{
-    min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/Images/bg.jpg) center/ cover no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    padding-bottom: 20px;
-}
+/* style for about-button */
 
-.card-container{
-    display: grid;
-    grid-template-columns: 420px 420px;
-}
-
-.card-img{
-    background: url("/Images/cha.jpg") center/cover no-repeat;
-}
-
-.banner h2{
-    padding-bottom: 40px;
-    margin-bottom: 20px;
-}
-
-.card-content{
-    background: #fff;
-    height: 330px;
-}
-
-.card-content h3{
-    text-align: center;
-    color: #000;
-    padding: 25px 0 10px 0;
-    font-size: 26px;
-}
-
-.form-row{
-    display: block;
-    width: 90%;
-    margin: 0 auto;
-}
-
-form select, form input{
-    display: block;
-    width: 100%;
-    margin: 15px 12px;
-    padding: 5px;
-    font-size: 15px;
-    font-family: 'Poppins', sans-serif;
-    outline: none;
-    border: none;
-    border-bottom: 1px solid#eee;
-    font-weight: 300;
-}
-
-form input[type=text], form input::placeholder, select, #date{
-    color: #9a9a9a;
-}
-
-form input[type=submit]{
-    color: #fff;
+#about-button{
     background: #f2745f;
-    padding: 12px 0;
+    /* border: 1px; */
+    padding:10px;
+    /* font-weight: bold; */
     border-radius: 4px;
     cursor: pointer;
+    font-size: 18px;
 }
 
-form input[type=submit]:hover{
-    opacity: 0.9;
+#about-button:hover{
+    background-color: yellow;
+    font-weight: bold;
 }
 
-@media(max-width:992px){
-    .card-container{
-        grid-template-columns: 100%;
-    }
-    .card-img{
-        height: 330px;
-    }
-}
+

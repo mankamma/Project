@@ -6,15 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/87928457bf.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+    <script>
+        $(document).ready(function(){
+        $("img#ypot").hover(function(){
+            $("img#ycup").css("transform","rotate(20deg)");
+            $("img#ydumpling").css("transform","rotate(-25deg)");
+            $("div#ydrop1").fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+            $("div#ydrop2").fadeOut(50).fadeIn(50).fadeOut(50).fadeIn(50);
+            $("div#ydrop3").fadeOut(80).fadeIn(80).fadeOut(80).fadeIn(80);
+        }, function(){
+            $("img#ycup").css("transform","rotate(0deg)");
+            $("img#ydumpling").css("transform","rotate(0deg)");
+        });
+    });
+    </script>  
 </head>
 <body>
     <header>
         <div class="announcement">
-            <p>Opening in Jan 2024!</p>
+            <p>10% discount offered from Dec 15-20th!</p>
         </div>
-        <img src="Images/HIC5.jpg" alt="website logo" width="150">
-        <img src="Images/shrimpdumpling.png" alt="website logo" width="100">
+        <div class="ycontainer1">
+            <div class="ylogo">
+                <img id=ylogo src="Images/HIC5.jpg" alt="website logo" width="100">
+            </div> 
+            <div class="ycontainer2">
+                <div id="ydrop1"></div>
+                <div id="ydrop2"></div>
+                <div id="ydrop3"></div>
+                <div class="yAnimation">
+                <img id="ypot" src="Images/pot6.png" alt="pot" height="70">
+                <img id="ycup" src="Images/cup1.png" alt="TeaCup" height="30">
+                <img id="ydumpling" src="Images/shrimpdumpling.png" alt="website logo" height="25">
+                </div>
+            </div>
+        </div>
     </header>
     <main>
         <div class="nav">
@@ -30,7 +59,7 @@
         <div><hr></div>
         
         <div class="about" style="font-size: 20px; clear: right;">
-            <div class = "about-content">
+            <div class="about-content">
                 <p>Welcome to HIC, your passport to a world of culinary delight. Nestled in the heart of Toronto, 
                     our dim sum restaurant is a gateway to the exquisite world of bite-sized Chinese wonders.</p><br>
                 <p>At HIC, we celebrate the art of dim sum, offering a diverse selection of steamed, 
@@ -40,13 +69,13 @@
                 <p>Our skilled chefs craft each dim sum dish with precision, using the freshest ingredients and time
                     -honored techniques. From classic dumplings to innovative creations, our menu promises an authentic 
                     journey through the flavors of Chinese cuisine.</p><br>
-                <a href="reservation.html"><button>Make a reservation</button></a>
+                <button type="button" id="about-button" onclick="location.href='reservation.html'">Make a reservation!</button>
             </div>
             <div class="slider-wrapper">
                 <div class="slider">
-                    <img id="slide-1" src ="Images/dimsum.jpg" alt="dimsum">
-                    <img id="slide-2" src ="Images/dimsum1.jpg" alt="dimsum">
-                    <img id="slide-3" src ="Images/dimsum2.jpg" alt="dimsum">
+                    <img id="slide-1" src="Images/dimsum.jpg" alt="dimsum">
+                    <img id="slide-2" src="Images/dimsum1.jpg" alt="dimsum">
+                    <img id="slide-3" src="Images/dimsum2.jpg" alt="dimsum">
                 </div>
                 <div class="slider-nav">
                     <a href="#slide-1"></a>
@@ -55,37 +84,33 @@
                 </div>
             </div>
         </div>
-        <!-- <div id="pri"></div>
-        <div id="sec"></div> -->
-        <!-- <img id="TeaCup" src="Images/TeaCup.bmp" alt="TeaCup" width="50"> -->
+   
     </main>
-    
     <footer>
-        <div class = "row">
-            <div class = "col">
+        <div class="row">
+            <div class="col">
                 <h3>Opening hours</h3>
                 <p>Monday-Friday: 10am - 10pm</p>
                 <p>Saturday-Sunday: 9am - 10pm</p>
             </div>
-            <div class ="col">
+            <div class="col">
                 <h3>Contact</h3>
                 <p>205 Humber College Blvd</p>
                 <p>Etobicoke, ON M9W 5L7</p>
-                <p class = "email">hic@gmail.com</p>
+                <p class="email">hic@gmail.com</p>
                 <h4>998-000-5555</h4>
             </div>
 
-            <div class ="col">
+            <div class="col">
                 <h3>Subscribe to receive news and updates</h3>
                 <form>
                     <i class="fa-regular fa-envelope"></i>
-                    <input type = "email" placeholder = "Enter your email address" required>
-                    <button type = "submit"><i class="fa-solid fa-arrow-right"></i></button>
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
                 </form>
             </div>
         </div>
-            <hr>
-            <p class = "copyright">Copyright &copy;2023 HIC</p>
+            <p class="copyright">Copyright &copy;2023 HIC</p>
     </footer>
 </body>
 </html>

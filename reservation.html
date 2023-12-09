@@ -1,17 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Book Now</title>
+    <title>Book Now | HIC</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/reservationStyle.css" type="text/css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/87928457bf.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+    <script>
+        $(document).ready(function(){
+        $("img#ypot").hover(function(){
+            $("img#ycup").css("transform","rotate(20deg)");
+            $("img#ydumpling").css("transform","rotate(-25deg)");
+            $("div#ydrop1").fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+            $("div#ydrop2").fadeOut(50).fadeIn(50).fadeOut(50).fadeIn(50);
+            $("div#ydrop3").fadeOut(80).fadeIn(80).fadeOut(80).fadeIn(80);
+        }, function(){
+            $("img#ycup").css("transform","rotate(0deg)");
+            $("img#ydumpling").css("transform","rotate(0deg)");
+        });
+    });
+    </script>  
 </head>
 <body>
     <header>
-        <img src="Images/HIC5.jpg" alt="website logo" width="150">
-        <img src="Images/shrimpdumpling.png" alt="website logo" width="100">
+        <div class="announcement">
+            <p>10% discount offered from Dec 15-20th!</p>
+        </div>
+        <div class="ycontainer1">
+            <div class="ylogo">
+                <img id=ylogo src="Images/HIC5.jpg" alt="website logo" width="100">
+            </div> 
+            <div class="ycontainer2">
+                <div id="ydrop1"></div>
+                <div id="ydrop2"></div>
+                <div id="ydrop3"></div>
+                <div class="yAnimation">
+                <img id="ypot" src="Images/pot6.png" alt="pot" height="70">
+                <img id="ycup" src="Images/cup1.png" alt="TeaCup" height="30">
+                <img id="ydumpling" src="Images/shrimpdumpling.png" alt="website logo" height="25">
+                </div>
+            </div>
+        </div>
     </header>
     <main>
         <div class="nav">
@@ -25,69 +58,66 @@
             </nav>
         </div>
         <div><hr></div>
-        <div id="pri"></div>
-        <div id="sec"></div>
-        <img id="TeaCup" src="Images/TeaCup.bmp" alt="TeaCup" width="50">
-
-        <section class = "banner">
+      
+        <section class="banner" id="res">
             <h2>MAKE YOUR BOOKING REQUEST NOW!</h2>
-            <div class = "card-container">
-                <div class = "card-img">
-                    <!-- image here -->
+            <div class="card-container" id="resContainer">
+                <div class="card-img" id="cardImg">
+                    
                 </div>
     
-                <div class = "card-content">
-                    <h3>Reservation</h3>
-                    <form action="" id="form1">
-                        <div class = "form-row">
-                            <input id="date" name="setTodaysDate" type="date">
-                            <!-- script reference to https://jsfiddle.net/emrebolat/06xuefmx/ -->
-                                <script>
-                                    var today = new Date().toISOString().split('T')[0];
-                                    document.getElementsByName("setTodaysDate")[0].setAttribute('min', today);
-                                </script>
-    
-                            <select name = "time">
-                                <option value = "time-select">Time</option>
-                                <option value = "1">10:00 AM</option>
-                                <option value = "2">11:00 AM</option>
-                                <option value = "3">12:00 PM</option>
-                                <option value = "4">1:00 PM</option>
-                                <option value = "5">2:00 PM</option>
-                                <option value = "6">3:00 PM</option>
-                                <option value = "7">4:00 PM</option>
-                                <option value = "8">5:00 PM</option>
-                                <option value = "9">6:00 PM</option>
-                                <option value = "10">7:00 PM</option>
-                                <option value = "11">8:00 PM</option>
-                            </select>
-                        </div>
-    
-                        <div class = "form-row">
-                            <input type="text" name="name" placeholder="Full Name">
-                            <input type="text" name="phone" placeholder="Phone Number" pattern="[0-9]{10}" >
-                        </div>
-    
-                        <div class = "form-row">
-                            <select name="guests">
-                                <option value="guests-select">Guests Number</option>
-                                <option value="1">1 Guest</option>
-                                <option value="2">2 Guests</option>
-                                <option value="3">3 Guests</option>
-                                <option value="4">4 Guests</option>
-                                <option value="5">5 Guests</option>
-                                <option value="6">6 Guests</option>
-                                <option value="7">7 Guests</option>
-                                <option value="8">8 Guests</option>
-                                <option value="9">9 Guests</option>
-                                <option value="10">10 Guests</option>
-                                <option value="11">11 Guests</option>
-                                <option value="12">12 Guests</option>
-                            </select>
-                            <input type = "submit" onclick="validateText()" value = "REQUEST A TABLE">
-                        </div>
-                    </form>
-                    <p id="error"></p>
+                <div class="card-content" id="resContent">
+                <h3>Reservation</h3>
+                <form action="" id="resForm1">
+                    <div class="form-row" id="row">
+                        <input id="date" name="setTodaysDate" type="date">
+                        <!-- script reference to https://jsfiddle.net/emrebolat/06xuefmx/ -->
+                            <script>
+                                var today = new Date().toISOString().split('T')[0];
+                                document.getElementsByName("setTodaysDate")[0].setAttribute('min', today);
+                            </script>
+
+                        <select name="time" id="resFormSelect">
+                            <option value="time-select">Time</option>
+                            <option value="1">10:00 AM</option>
+                            <option value="2">11:00 AM</option>
+                            <option value="3">12:00 PM</option>
+                            <option value="4">1:00 PM</option>
+                            <option value="5">2:00 PM</option>
+                            <option value="6">3:00 PM</option>
+                            <option value="7">4:00 PM</option>
+                            <option value="8">5:00 PM</option>
+                            <option value="9">6:00 PM</option>
+                            <option value="10">7:00 PM</option>
+                            <option value="11">8:00 PM</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row" id="row">
+                        <input id="resFormInput" type="text" name="name" placeholder="Full Name">
+                        <input id="resFormInput" type="text" name="phone" placeholder="Phone Number" pattern="[0-9]{10}" >
+                    </div>
+                    
+                    <div class="form-row" id="row">
+                        <select name="guests" id="formSelect">
+                            <option value="guests-select">Guests Number</option>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5 Guests</option>
+                            <option value="6">6 Guests</option>
+                            <option value="7">7 Guests</option>
+                            <option value="8">8 Guests</option>
+                            <option value="9">9 Guests</option>
+                            <option value="10">10 Guests</option>
+                            <option value="11">11 Guests</option>
+                            <option value="12">12 Guests</option>
+                        </select>
+                        <input id="resFormInput" type="submit" onclick="validateText()" value="REQUEST A TABLE">
+                    </div>
+                </form>
+                <p id="error"></p>
     
                 </div>
             </div>
@@ -118,9 +148,8 @@
                 </form>
             </div>
         </div>
-            <hr>
             <p class = "copyright">Copyright &copy;2023 HIC</p>
-            <script src="project.js"></script>
+            <script src="js/project.js" defer></script>
     </footer>
 </body>
 </html>
