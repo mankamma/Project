@@ -71,9 +71,7 @@
         #yForm input[type="radio"]{
             width: 80px;
         }
-        #yForm submit{
-            background-color:lightgray;
-        }
+
 
     </style>
 </head>
@@ -114,15 +112,14 @@
         
         <h1 id="yh1">Feedback Page</h1>
         <form id="yForm" method="post">
-            
             <br><br>
             <fieldset>
                 <label class="big">Customer Info:</label>
                 <br><br>
                 <label for="firstName">First Name:</label><br>
-                    <input type="text" id="firstName" placeholder="First Name" name="firstName"  required><br><br>
-                    <label for="lastName">Last Name:</label><br>
-                    <input type="text" id="lastName" placeholder="Last Name" name="lastName"  required><br><br><br>          
+                <input type="text" id="firstName" placeholder="First Name" name="firstName" required><br><br>
+                <label for="lastName">Last Name:</label><br>
+                <input type="text" id="lastName" placeholder="Last Name" name="lastName" required><br><br><br>
             </fieldset>
             <label class="big">Feedback on:</label>
             <br><br>
@@ -134,23 +131,61 @@
             <label for="location">Location</label><br>
             <input type="radio" name="feedback_related_to" value="Others " id="others">
             <label for="others">Others</label><br><br><br>
-            <label class="big">Your Contact Details:<br></label>  
+            <label class="big">Your Contact Details:<br></label>
             <br><br><br>
             <label for="email">Email:</label><br>
             <input type="email" id="email" name="contact" placeholder="Your Email" required><br><br>
             <label for="tel">Phone number:</label><br>
             <input type="tel" id="tel" name="contact" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
             <br>
-            <label for="cmethod">Preferred Method of Contact</label><br>
-            <select name="methods" id="cmethod">
-            <option value="Phone">Phone</option>
-            <option value="Email" selected>Email</option>
+            <label for="method">Preferred Method of Contact</label><br>
+            <select name="methods" id="method">
+                <option value="Phone">Phone</option>
+                <option value="Email" selected>Email</option>
             </select><br><br><br><br>
             <label for="feedback" class="big">Provide your Feedback<br></label><br>
             <textarea name="fback" id="feedback" cols="50" rows="10" style="color: grey;">Your Feedback Here!</textarea><br><br>
-            <input type="submit" id="submit" style="width: 80px; height: 50px;background-color: orange; color: white; font-size: 15px;  border-radius: 4px;" onclick="submitFeedback()" value = "Submit"><br><br>
+            <input type="button" id="submit" style="width: 80px; height: 50px; color: white; background-color:orange; font-size: 15px; border-radius: 4px;" onclick="submitFeedback()" value="Submit"><br><br>
             <div id="error"></div>
-     </form>
+        </form>
+        
+        <script>
+            function submitFeedback() {
+                let firstName = document.getElementById("firstName").value;
+                let lastName = document.getElementById("lastName").value;
+                let feedback_related_to = document.querySelector('input[name="feedback_related_to"]:checked');
+                let email = document.getElementById("email").value;
+                let tel = document.getElementById("tel").value;
+                let methods = document.getElementById("method").value;
+        
+                document.getElementById("error").innerHTML = "";
+        
+                if (firstName === "") {
+                    showError("Please input your first name.");
+                } else if (lastName === "") {
+                    showError("Please input your last name");
+                } else if (!feedback_related_to) {
+                    showError("Please select your feedback relates to.");
+                } else if (email === "") {
+                    showError("Please fill in your email.");
+                } else if (tel === "") {
+                    showError("Please fill in your phone number.");
+                } else if (methods === "") {
+                    showError("Please fill in your preferred methods.");
+                } else {
+                    alert("Your feedback has been received. Thank you.");
+                    document.getElementById("yForm").reset();
+                }
+            }
+        
+            function showError(message) {
+                let errorElement = document.getElementById("error");
+                errorElement.style.color = "red";
+                errorElement.style.fontSize = "larger";
+                errorElement.innerHTML = message;
+            }
+        </script>
+        
     </main>
     
     <footer>
