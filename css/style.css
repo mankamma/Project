@@ -71,6 +71,12 @@ nav li a:visited {
 
 }
 
+hr{
+    width:100%;
+    border:0;
+    border-bottom: 1px solid black;
+}
+
 .announcement {
     display: inline-block;
     height: 110%;
@@ -215,7 +221,7 @@ footer{
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .col{
@@ -252,7 +258,7 @@ form input{
     color: black;
     border: 0;
     outline: none;
-}
+    }
 
 form button{
     background: transparent;
@@ -260,21 +266,14 @@ form button{
     border: 0;
     outline: none;
     cursor: pointer;
-}
+    }
 
-hr{
-    width:100%;
-    border:0;
-    border-bottom: 1px solid black;
-}
 
 .copyright{
     width:100%;
     text-align: center;
+    border-top: 1px solid black;
 }
-
-
-
 
 
 /* style for About Us page */
@@ -300,7 +299,7 @@ hr{
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-    border-radius: 0.5rem;
+    border-radius: 1.5rem;
     overflow-x: hidden;
 }
 
@@ -337,15 +336,18 @@ hr{
 /* style for about-button */
 
 #about-button{
-    background-color: rgb(175, 200, 159);
+    background: #f2745f;
     /* border: 1px; */
     padding:10px;
     /* font-weight: bold; */
     border-radius: 4px;
     cursor: pointer;
+    font-size: 18px;
 }
 
 #about-button:hover{
-    background-color: #9a9a9a;
+    background-color: yellow;
     font-weight: bold;
 }
+
+
