@@ -37,10 +37,11 @@ function validateText(){
         document.getElementById("error").style.fontSize = "10px";
         document.getElementById("error").style.color = "red";
         document.getElementById("error").innerHTML = errorMessage;
-        return false;
+        return false; 
     }
 
-    // If all fields are filled, allow the form to submit
-    alert("Your request has been received. We will contact you for the confirmation.");
-    return false; 
+    if (date !=="" && time !=="" && name !=="" && date !=="" && phone !=="" && guest !=="" && /^[0-9]{10}$/.test(phone)){
+    alert("Your request has been received. We will be in touch with you shortly.");
+        window.location.href = "confirmation_page.html";
+    }    
 }
