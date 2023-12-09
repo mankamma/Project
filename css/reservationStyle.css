@@ -14,7 +14,7 @@
 .banner{
     font-family: 'Poppins', sans-serif;
     min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/Images/bg.jpg") center/ cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/bg.jpg") center/ cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,7 +29,7 @@
 }
 
 .card-img{
-    background: url("/Images/cha.jpg") center/cover no-repeat;
+    background: url("../Images/cha.jpg") center/cover no-repeat;
 }
 
 .banner h2{
