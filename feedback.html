@@ -157,33 +157,49 @@
                 let email = document.getElementById("email").value;
                 let tel = document.getElementById("tel").value;
                 let methods = document.getElementById("method").value;
-        
-                document.getElementById("error").innerHTML = "";
-        
+                let errorMessage="";
+              
                 if (firstName === "") {
-                    showError("Please input your first name.");
-                } else if (lastName === "") {
-                    showError("Please input your last name");
-                } else if (!feedback_related_to) {
-                    showError("Please select your feedback relates to.");
-                } else if (email === "") {
-                    showError("Please fill in your email.");
-                } else if (tel === "") {
-                    showError("Please fill in your phone number.");
-                } else if (methods === "") {
-                    showError("Please fill in your preferred methods.");
-                } else {
-                    alert("Your feedback has been received. Thank you.");
-                    document.getElementById("yForm").reset();
+                    errorMessage+="Please input your first name.<br>";
+                } 
+                if (lastName === "") {
+                    errorMessage+="Please input your last name<br>";
+                }
+                if (!feedback_related_to) {
+                    errorMessage+="Please select what your feedback relates to.<br>";
+                }
+                if (email === "") {
+                    errorMessage+="Please fill in your email.<br>";
+                }
+                if (tel === "") {
+                    errorMessage+="Please fill in your phone number.<br>";
+                }
+                if (methods === "") {
+                    errorMessage+="Please fill in your preferred methods.<br>";
+                
+                }
+                if (errorMessage !== "") {
+                    document.getElementById("error").style.fontSize = "10px";
+                    document.getElementById("error").style.color = "red";
+                    document.getElementById("error").innerHTML = errorMessage;
+                    return false; // Prevent form submission
+                }
+                if(firstName !== "" && lastName !== "" && feedback_related_to && email !== "" && tel !== "" && methods !== ""){
+                alert("Your feedback has been received. Thank you.");
+                document.getElementById("yForm").reset();
+                errorMessage=""
+                document.getElementById("error").innerHTML = errorMessage;
                 }
             }
-        
-            function showError(message) {
-                let errorElement = document.getElementById("error");
-                errorElement.style.color = "red";
-                errorElement.style.fontSize = "larger";
-                errorElement.innerHTML = message;
-            }
+                
+
+
+            // function showError(message) {
+            //     let errorElement = document.getElementById("error");
+            //     errorElement.style.color = "red";
+            //     errorElement.style.fontSize = "larger";
+            //     errorElement.innerHTML = message;
+            //}
         </script>
         
     </main>
