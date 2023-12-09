@@ -27,7 +27,7 @@ function validateText(){
 
     }
 
-    if (guest === ""){
+    if (guest === "guests-select"){
         errorMessage += "Please select the numbers of guest.<br>";
 
     }
@@ -37,11 +37,10 @@ function validateText(){
         document.getElementById("error").style.fontSize = "10px";
         document.getElementById("error").style.color = "red";
         document.getElementById("error").innerHTML = errorMessage;
-        return false; // Prevent form submission
+        return false;
     }
 
-    if (date !=="" && time !=="" && name !=="" && date !=="" && phone !==""){
-    alert("Your request has been received. We will contact you for confirmation.");
-        window.location.href = "confirmation_page.html";
-    }    
+    // If all fields are filled, allow the form to submit
+    alert("Your request has been received. We will contact you for the confirmation.");
+    return false; 
 }
