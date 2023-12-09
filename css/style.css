@@ -77,6 +77,12 @@ hr{
     border-bottom: 1px solid black;
 }
 
+hr{
+    width:100%;
+    border:0;
+    border-bottom: 1px solid black;
+}
+
 /* style for announcement on About us page */
 .announcement {
     display: inline-block;
