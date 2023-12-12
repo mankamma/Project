@@ -45,3 +45,14 @@ function validateText(){
         window.location.href = "confirmation_page.html";
     }    
 }
+
+
+function validateEmail(){
+
+    let femail = document.forms["footer-form"]["femail"].value;
+
+    if(femail != ""){
+        alert("Thank you for subscribing! We have added you to our mailing list.");
+        window.location.reload();
+    }
+}

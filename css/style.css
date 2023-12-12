@@ -325,28 +325,28 @@ footer{
     position: relative;
 }
 
-.email {
-    width: fit-content;
-    position: relative;
-    margin: 10px 0;
+.fa-regular{
+    color:black;
+    text-decoration: none;
 }
 
-footer form{
-    padding-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 50px;
+.fa-regular:hover{
+    color:#9a9a9a;
+}
+
+.fa-solid:hover{
+    color:#9a9a9a;
 }
 
 footer form input{
     margin-left: 5px;
-    width: 100%;
+    width: 225px;
     background: transparent;
     color: black;
     border: 0;
     outline: none;
-    }
+    border-bottom: 1px solid#eee;
+}
 
 footer form button{
     background: transparent;
@@ -354,15 +354,13 @@ footer form button{
     border: 0;
     outline: none;
     cursor: pointer;
-    }
-
+}
 
 .copyright{
     width:100%;
     text-align: center;
     border-top: 1px solid black;
 }
-
 
 /* style for About Us page */
 

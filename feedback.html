@@ -221,14 +221,15 @@
 
             <div class="col">
                 <h3>Subscribe to receive news and updates</h3>
-                <form>
-                    <i class="fa-regular fa-envelope"></i>
-                    <input type="email" placeholder="Enter your email address" required>
-                    <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                <form id="footer-form">
+                    <a href="#femail"><i class="fa-regular fa-envelope"></i></a>
+                    <input type="email" id="femail" placeholder="Enter your email address" required>
+                    <button type="submit" onclick="validateEmail()"><i class="fa-solid fa-arrow-right"></i></button>
                 </form>
             </div>
         </div>
             <p class="copyright">Copyright &copy;2023 HIC</p>
+            <script src="js/project.js" defer></script>
     </footer>
 </body>
 </html>
