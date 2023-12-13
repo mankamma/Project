@@ -44,11 +44,11 @@ section img {
 
 /* main navigation style */
 nav li {
-    font-size: 20px;
+    font-size: 15px;
     display: inline-block;
-    margin-right: 50px;
-    padding:20px;
-    float: right;
+    margin-right: 20px;
+    padding:10px;
+    
 }
 
 nav ul li a {
@@ -433,26 +433,12 @@ footer form button{
     font-weight: bold;
 }
 
-.head {
+section#head {
     height: 100vh;
     min-height: 500px;
-    background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080');
+    background-image: url('../Images/home_img1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    
   }
-  
-  /* Media Query for devices withi coarse pointers and no hover functionality */
-  
-  /* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
-  
-  @media (pointer: coarse) and (hover: none) {
-    .head {
-      background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
-    }
-  
-    .head {
-      display: none;
-    }
-  }
-
