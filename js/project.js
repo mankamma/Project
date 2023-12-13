@@ -1,5 +1,7 @@
 function validateText(){
 
+    // Clear the existing error message
+    document.getElementById("error").innerHTML = "";    
     let date=document.forms["resForm1"]["setTodaysDate"].value;
     let time=document.forms["resForm1"]["time"].value;
     let name=document.forms["resForm1"]["name"].value;
@@ -22,8 +24,8 @@ function validateText(){
 
     }
 
-    if (phone === ""){
-        errorMessage += "Please fill in a phone number.<br>";
+    if (phone === "" || !/^[0-9]{10}$/.test(phone)){
+        errorMessage += "Please fill in a phone number with correct format.<br>";
 
     }
 
@@ -42,7 +44,6 @@ function validateText(){
 
     if (date !=="" && time !=="" && name !=="" && date !=="" && phone !=="" && guest !=="" && /^[0-9]{10}$/.test(phone)){
     alert("Your request has been received. We will be in touch with you shortly.");
-        window.location.href = "confirmation_page.html";
     }    
 }
 

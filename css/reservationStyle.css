@@ -76,12 +76,14 @@
     color: #9a9a9a;
 }
 
-#resForm1 input[type=submit]{
+#resForm1 button{
+    width: 400px;
     color: #fff;
     background: #f2745f;
     padding: 12px 0;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 15px;
 }
 
 #resForm1 input[type=submit]:hover{
@@ -96,4 +98,5 @@
         height: 330px;
     }
 }
+
 
