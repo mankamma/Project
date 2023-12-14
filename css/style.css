@@ -33,7 +33,6 @@ h2#menu1 {
 
 section#menu{
     font-size: 30px;
-    clear: right;
     padding: 20px;
 }
 
@@ -48,7 +47,7 @@ nav li {
     display: inline-block;
     margin-right: 20px;
     padding:10px;
-    
+    float: right;
 }
 
 nav ul li a {
