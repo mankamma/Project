@@ -61,12 +61,12 @@ ul a:link {
 }
 
 nav li:hover {
-
-    font-size: 25px;
+    background-color: rgb(221, 234, 221);
+    border-radius: 50%;
 }
 
 nav li a:visited {
-    color: orange;
+    color: rgb(237, 160, 18);
 
 }
 
