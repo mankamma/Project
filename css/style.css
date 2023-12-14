@@ -32,8 +32,13 @@ h2#menu1 {
 }
 
 section#menu{
+    margin: 0 auto;
     font-size: 30px;
     padding: 20px;
+}
+
+div#menuDiv {
+    text-align: center;
 }
 
 section img {
@@ -47,6 +52,9 @@ nav li {
     display: inline-block;
     margin-right: 20px;
     padding:10px;
+}
+
+nav ol ul {
     float: right;
 }
 
