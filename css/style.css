@@ -458,3 +458,9 @@ section#head {
     background-repeat: no-repeat;
     
   }
+ 
+  @media(max-width:480px){
+    #imgMenu{
+        width: 50%;
+    }
+}
