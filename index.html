@@ -33,11 +33,15 @@
                 if (i == 0)
                     imgMenu.src = "../Images/foodMenu.png";
                 else if (i == 1)
-                    imgMenu.src = "./Images/home_img.jpg";
+                    imgMenu.src = "./Images/wonton.jpg";
                 else if (i == 2)
-                    imgMenu.src = "./Images/restaurant1.jpg";
-                i = ++i % 3;
-            }, 2000)
+                    imgMenu.src = "./Images/siumai.jpg";
+                else if (i == 3)
+                    imgMenu.src = "./Images/dumplings.jpg";
+                else if (i == 4)
+                    imgMenu.src = "./Images/panFriedNoodles.jpg";
+                i = ++i % 5;
+            }, 3000)
         });
     </script>
     <style>
@@ -95,7 +99,7 @@
 
         <section id="menu">
             <div id="menuDiv">
-                <h2 id="menu1">FEATURED MENU</h2>
+                <h2 id="menu1" style="text-align: center;">FEATURED DISHES</h2>
                 <img id="imgMenu" src="./Images/foodMenu.png" alt="Menu" width="450" height="600">
             </div>
         </section>

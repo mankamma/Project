@@ -23,6 +23,10 @@
     padding-bottom: 20px;
 }
 
+.banner h2{
+    font-size: 30px;
+}
+
 .card-container{
     display: grid;
     grid-template-columns: 420px 420px;

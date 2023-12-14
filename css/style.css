@@ -7,6 +7,11 @@ html {
     src: url("/fonts/Poppins.ttf");
 }
 
+@font-face {
+    font-family: ShadowsIntoLight-Regular;
+    src: url("/fonts/ShadowsIntoLight-Regular.ttf");
+}
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -25,8 +30,8 @@ body {
 }
 
 h2#menu1 {
-    font-size: 30px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 60px;
+    font-family:ShadowsIntoLight-Regular;
     text-align: left;
     padding: 20px;
 }
@@ -54,7 +59,7 @@ nav li {
     padding:10px;
 }
 
-nav ol ul {
+nav{
     float: right;
 }
 
