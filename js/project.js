@@ -52,7 +52,7 @@ function validateEmail(){
 
     let femail = document.forms["footer-form"]["femail"].value;
 
-    if(femail != ""){
+    if(femail != "" && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(femail)){
         alert("Thank you for subscribing! We have added you to our mailing list.");
         window.location.reload();
     }
