@@ -36,7 +36,8 @@ function validateText(){
     
     // Check if there are any error messages
     if (errorMessage !== "") {
-        document.getElementById("error").style.fontSize = "10px";
+        document.getElementById("error").style.fontSize = "13px";
+        document.getElementById("error").style.fontWeight = "bold";
         document.getElementById("error").style.color = "red";
         document.getElementById("error").innerHTML = errorMessage;
         return false; 
