@@ -40,8 +40,12 @@ section#menu{
     margin: 0 auto;
     font-size: 30px;
     padding: 20px;
+    
 }
 
+img#imgMenu{
+    margin-right: 80px;
+}
 div#menuDiv {
     text-align: center;
 }
@@ -460,7 +464,7 @@ section#head {
   }
  
   @media(max-width:320px){
-    #imgMenu{
+    #imgMenu, #imgDish{
         width: 50%;
     }
 }
