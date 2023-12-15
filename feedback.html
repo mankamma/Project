@@ -11,6 +11,7 @@
     <script src="https://kit.fontawesome.com/87928457bf.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- JQuery for the teapot animation on top right corner of pages -->
     <script>
         $(document).ready(function(){
         $("img#ypot").hover(function(){
@@ -55,7 +56,6 @@
         }
         #yForm textarea{
             margin-top: 15px;
-            margin-left: 50px;
         }
         #yForm input, #yForm select, #yForm textarea{
             border: 2px dotted black;
@@ -67,13 +67,14 @@
             font-weight: bold;
             display: inline-block;
         }
-        #yForm input#fname, #yForm input#lname, #yForm input#email, #yForm input#tel, #yForm textarea#feedback, #yForm select{
+        #yForm input#firstName, #yForm input#lastName, #yForm input#email, #yForm input#tel, #yForm textarea#feedback, #yForm select{
             background-color: aliceblue;
         }
+
         #yForm input[type="radio"]{
-            width: 80px;
+            width: 40px;
         }
-        #ythanks{
+        #ythanks, #success{
             font-size: 20px;
             color: orange;
             font-weight: bold;
@@ -81,10 +82,39 @@
             margin-left: 30px;
         }
 
-        #yheart, #yheart2, yheart3, yheart4, yheart5, yheart6{
-            margin-left: 50px;
+        #error{
+            color: red;
+            font-weight: bold;
+            align-self: center;
+            line-height: 20px;
+            font-size: 13px !important;
+        }
+        
+        #ysubmit{
+        width: 80px; 
+        height: 50px; 
+        color: white; 
+        background-color:orange; 
+        font-size: 15px; 
+        border-radius: 4px;
         }
 
+        .grid-container {
+            display: grid;
+            grid-template-columns: 400px 1fr; 
+        }
+
+        .yform-container {
+            grid-column: 1; 
+            padding: 20px; 
+        }
+
+        .ymsg {
+            grid-column: 2; 
+            padding: 20px; 
+            line-height: 20px;
+            align-self: center;
+        }
     </style>
 </head>
 <body>
@@ -95,7 +125,7 @@
         </div>
         <div class="ycontainer1">
             <div class="ylogo">
-                <img id=ylogo src="Images/HIC5.jpg" alt="website logo" width="100">
+                <a href="index.html"><img id=ylogo src="Images/HIC5.jpg" alt="website logo" width="100" ></a>
             </div> 
             <div class="ycontainer2">
                 <div id="ydrop1"></div>
@@ -122,7 +152,9 @@
         </div>
         <div><hr></div>
         
-        <h1 id="yh1">Feedback Page</h1>
+    <h1 id="yh1">Feedback Page</h1>
+    <div class="grid-container">
+        <div class="yform-container">
         <form id="yForm" method="post">
             <br><br>
             <fieldset>
@@ -148,7 +180,7 @@
             <label for="email">Email:</label><br>
             <input type="email" id="email" name="contact" placeholder="Your Email" required><br><br>
             <label for="tel">Phone number:</label><br>
-            <input type="tel" id="tel" name="contact" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+            <input type="tel" id="tel" name="contact" placeholder="123-456-7890" pattern="[0-9]{3}-?[0-9]{3}-?[0-9]{4}" required><br>
             <br>
             <label for="method">Preferred Method of Contact</label><br>
             <select name="methods" id="method">
@@ -157,13 +189,16 @@
             </select><br><br><br><br>
             <label for="feedback" class="big">Provide your Feedback<br></label><br>
             <textarea name="fback" id="feedback" cols="50" rows="10" style="color: grey;">Your Feedback Here!</textarea><br><br>
-            <input type="button" id="submit" style="width: 80px; height: 50px; color: white; background-color:orange; font-size: 15px; border-radius: 4px;" onclick="submitFeedback()" value="Submit"><br><br>
-            <div id="error"></div>
+            <input type="button" id="ysubmit"  onclick="submitFeedback(); submitconfirmed()" value="Submit"><br><br>
         </form>
-        <div id="ythanks">
-            Thank you for taking your time to give us your valuable feedback</a>
-
         </div>
+    
+        <div class="ymsg">
+            <div id="error"></div>
+            <div id="ythanks"></div>
+            <div id="success"></div>
+        </div>
+    </div>
         <br>
         <script>
             function submitFeedback() {
@@ -171,9 +206,12 @@
                 let lastName = document.getElementById("lastName").value;
                 let feedback_related_to = document.querySelector('input[name="feedback_related_to"]:checked');
                 let email = document.getElementById("email").value;
+                let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 let tel = document.getElementById("tel").value;
+                let telRegex = /^[0-9]{3}-?[0-9]{3}-?[0-9]{4}$/;
                 let methods = document.getElementById("method").value;
                 let errorMessage="";
+                let successfulMessage="Your feedback has been received. Thank you!";
               
                 if (firstName === "") {
                     errorMessage+="Please input your first name.<br>";
@@ -186,9 +224,13 @@
                 }
                 if (email === "") {
                     errorMessage+="Please fill in your email.<br>";
-                }
+                }else if (!/@/.test(email)){
+                    errorMessage += "Please enter a valid email address.<br>";
+                    }
                 if (tel === "") {
                     errorMessage+="Please fill in your phone number.<br>";
+                }else if (!/^\d{10}$/.test(tel.replace(/-/g, ''))){
+                    errorMessage += "Please enter a valid phone number.<br>"
                 }
                 if (methods === "") {
                     errorMessage+="Please fill in your preferred methods.<br>";
@@ -201,17 +243,20 @@
                     return false; // Prevent form submission
                 }
                 if(firstName !== "" && lastName !== "" && feedback_related_to && email !== "" && tel !== "" && methods !== ""){
-                alert("Your feedback has been received. Thank you.");
-                document.getElementById("yForm").reset();
                 errorMessage=""
                 document.getElementById("error").innerHTML = errorMessage;
+                document.getElementById("error").style.color = "white";
+                document.getElementById("success").innerHTML = successfulMessage;
+                alert("Your feedback has been received. \nThank you for taking time to share your valuable feedback!");
+                // Hide successfulMessage after showing for 10 seconds (10000 milliseconds = 10 seconds)
+                setTimeout(function() {
+                    document.getElementById("success").innerHTML = "";
+                }, 10000); 
+                document.getElementById("yForm").reset();
+                return true;
                 }
             }
-                
-
-
         </script>
-        
     </main>
     
     <footer>
