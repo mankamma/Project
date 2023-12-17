@@ -93,12 +93,6 @@ hr{
     border-bottom: 1px solid black;
 }
 
-hr{
-    width:100%;
-    border:0;
-    border-bottom: 1px solid black;
-}
-
 /* style for announcement on About us page */
 .announcement {
     display: inline-block;
@@ -394,7 +388,9 @@ footer form button{
 .slider-wrapper {
     display: flex; 
     position:relative;
-    max-width: 48rem;
+    /* max-width: 48rem; */
+    max-width: 50%;
+    max-height: 50%;
     margin: 0 auto;
 }
 
@@ -462,9 +458,152 @@ section#head {
     background-repeat: no-repeat;
     background-color: rgba(255, 255, 255, 0.1);
   }
- 
-  @media(max-width:320px){
+
+/* media queries for menu*/
+
+@media(max-width:320px){
     #imgMenu, #imgDish{
         width: 50%;
+    }
+}
+
+/* media queries for footer and About Us page*/
+
+@media(max-width:1318px){
+
+    .slider-wrapper{
+        width: 95%;
+        height: 95%;
+    }
+
+    .about-content p{
+        font-size: 1.15rem;
+    }
+}
+
+@media(max-width:1225px){
+
+    .about-content p{
+        font-size: 1.1rem;
+    }
+
+    #about-button{
+        font-size: 1.1rem;
+    }
+}
+
+@media(max-width:1171px){
+
+    .about-content p{
+        font-size: 1rem;
+    }
+
+    #about-button{
+        font-size: 1rem;
+    }
+
+}
+
+@media(max-width:1130px){
+    footer form input{
+        width: 170px;
+    }
+}
+
+@media(max-width:955px){
+
+    .about-content p{
+        font-size: 0.9rem;
+    }
+
+    #about-button{
+        font-size: 0.9rem;
+    }
+
+    .fa-regular, .fa-solid{
+        font-size: 0.7rem;
+    }
+    
+    footer form input{
+        width: 140px;
+    }
+
+    .col p, .col h3, .copyright{
+        font-size: 11px;
+    }
+
+    #femail::placeholder{
+        font-size: 11.5px;
+    }
+}
+
+@media(max-width:791px){
+
+    .about-content p{
+        font-size: 0.8rem;
+    }
+
+    #about-button{
+        font-size: 0.8rem;
+    }
+
+    footer form input{
+        width: 125px;
+    }
+
+    .col p, .col h3, .copyright{
+        font-size: 10.5px;
+    }
+
+    #femail::placeholder{
+        font-size: 11px;
+    }
+}
+
+@media(max-width:720px){
+    footer form input{
+        width: 108px;
+    }
+
+    .fa-regular, .fa-solid{
+        font-size: 0.6rem;
+    }
+
+    .col p, .col h3, .copyright{
+        font-size: 10px;
+    } 
+
+    #femail::placeholder{
+        font-size: 9.5px;
+    }
+}
+
+@media(max-width:648px){
+
+    .about-content p{
+        font-size: 0.7rem;
+    }
+
+    #about-button{
+        font-size: 0.7rem;
+    }
+
+    footer form input{
+        width: 105px;
+    }
+
+    #femail::placeholder{
+        font-size: 9px;
+    }
+}
+
+@media(max-width:588px){
+
+    .about-content p{
+        font-size: 0.6rem;
+    }
+
+    #about-button{
+        font-size: 0.6rem;
     }
 }
