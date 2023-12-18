@@ -53,7 +53,12 @@ function validateEmail(){
 
     let femail = document.forms["footer-form"]["femail"].value;
 
-    if(femail != "" && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(femail)){
+    if(femail == "" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(femail)){
+        document.getElementById("email-error").style.fontWeight = "bold";
+        document.getElementById("email-error").style.color = "red";
+        document.getElementById("email-error").innerHTML = "Please enter a valid email address.";
+    }
+    else{
         alert("Thank you for subscribing! We have added you to our mailing list.");
         window.location.reload();
     }
